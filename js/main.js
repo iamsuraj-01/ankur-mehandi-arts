@@ -136,7 +136,7 @@
 
             // Detect if the user is on mobile or desktop
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            const whatsappNumber = "918937000914"; // Replace with your WhatsApp number
+            const whatsappNumber = "919876543210"; // Replace with your WhatsApp number
             const whatsappUrl = isMobile
                 ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}` // Mobile link
                 : `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`; // WhatsApp Web link

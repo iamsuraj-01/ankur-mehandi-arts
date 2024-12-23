@@ -81,82 +81,87 @@
             <div class="container">
                 <div class="row g-0">
                     <div class="col-1">
-                        <img src="img/background-site.jpg" class="img-fluid h-100 w-100 rounded-start" style="object-fit: cover; opacity: 0.7;" alt="">
+                        <img src="img/background-site(1).jpg" class="img-fluid h-100 w-100 rounded-start" style="object-fit: cover; opacity: 0.7;" alt="">
                     </div>
                     <div class="col-10">
-                        <div class="border-bottom border-top border-primary bg-light py-5 px-4">
-                            <div class="text-center">
-                                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Book Us</small>
-                                <h1 class="display-5 mb-5">Where you want Our Services</h1>
+                        <form id="bookUsForm">
+                            <div class="border-bottom border-top border-primary bg-light py-5 px-4">
+                                <div class="text-center">
+                                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Book Us</small>
+                                    <h1 class="display-5 mb-5">Where would you like our Mehendi & Tattoo Services?</h1>
+                                </div>
+                                <div class="row g-4 form">
+                                    <!-- Name Field -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <input type="text" id="name" name="name" class="form-control border-primary p-2" placeholder="Your Name" required>
+                                    </div>
+                                    <!-- Phone Number Field -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <input type="tel" id="phone" name="phone" class="form-control border-primary p-2" placeholder="Your Phone Number" required>
+                                    </div>
+                                    <!-- Email Address Field -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <input type="email" id="email" name="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
+                                    </div>
+                                    <!-- City Type Dropdown -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <select id="city" name="city" class="form-select border-primary p-2" aria-label="Select City">
+                                            <option value="" selected>Select City</option>
+                                            <option value="Rishikesh">Rishikesh</option>
+                                            <option value="Haridwar">Haridwar</option>
+                                            <option value="Dehradun">Dehradun</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <!-- Service Type Dropdown (Mehendi or Tattoo) -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <select id="serviceType" name="serviceType" class="form-select border-primary p-2" aria-label="Select Service Type" required>
+                                            <option value="" selected>Select Service Type</option>
+                                            <option value="Mehendi">Mehendi</option>
+                                            <option value="Tattoo">Tattoo</option>
+                                        </select>
+                                    </div>
+                                    <!-- Select Design (Optional) Dropdown -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <select id="design" name="design" class="form-select border-primary p-2" aria-label="Select Design (Optional)">
+                                            <option value="" selected>Select Design</option>
+                                            <option value="Traditional Mehendi">Traditional Mehendi</option>
+                                            <option value="Bridal Mehendi">Bridal Mehendi</option>
+                                            <option value="Arabic Mehendi">Arabic Mehendi</option>
+                                            <option value="Festival Mehendi">Festival Mehendi</option>
+                                            <option value="Guest Mehendi">Guest Mehendi</option>
+                                            <option value="Tattoo Designs">Tattoo Designs</option>
+                                            <option value="Tattoo Removal">Tattoo Removal</option>
+                                        </select>
+                                    </div>
+                                    <!-- Date Picker Field -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <input type="date" id="bookingDate" name="bookingDate" class="form-control border-primary p-2">
+                                    </div>
+                                    <!-- Submit Button -->
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="row g-4 form">
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select Country</option>
-                                        <option value="1">USA</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select City</option>
-                                        <option value="1">Depend On Country</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select Palace</option>
-                                        <option value="1">Depend On Country</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Small Event</option>
-                                        <option value="1">Event Type</option>
-                                        <option value="2">Big Event</option>
-                                        <option value="3">Small Event</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>No. Of Palace</option>
-                                        <option value="1">100-200</option>
-                                        <option value="2">300-400</option>
-                                        <option value="3">500-600</option>
-                                        <option value="4">700-800</option>
-                                        <option value="5">900-1000</option>
-                                        <option value="6">1000+</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Vegetarian</option>
-                                        <option value="1">Vegetarian</option>
-                                        <option value="2">Non Vegetarian</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="mobile" class="form-control border-primary p-2" placeholder="Your Contact No.">
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="date" class="form-control border-primary p-2" placeholder="Select Date">
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
+                        </form>
+
+                        <!-- Thank You Modal -->
+                        <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-body text-dark">
+                                        Thank you for the booking ! We will process it shortly and get in touch with you.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-1">
-                        <img src="img/background-site.jpg" class="img-fluid h-100 w-100 rounded-end" style="object-fit: cover; opacity: 0.7;" alt="">
+                        <img src="img/background-site(2).jpg" class="img-fluid h-100 w-100 rounded-end" style="object-fit: cover; opacity: 0.7;" alt="">
                     </div>
                 </div>
             </div>
