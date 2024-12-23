@@ -107,5 +107,48 @@
         }
     });
 
+    // Book Us Form Submission
+    $(document).ready(function () {
+        $("#bookUsForm").on("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const name = $("#name").val();
+            const phone = $("#phone").val();
+            const email = $("#email").val();
+            const city = $("#city option:selected").text();
+            const serviceType = $("#serviceType option:selected").text();
+            const design = $("#design option:selected").text();
+            const bookingDate = $("#bookingDate").val();
+
+            // Create the WhatsApp message
+            const messageLines = [
+                "Hello, I want to book a service.",
+                `Name: ${name}`,
+                `Phone: ${phone}`,
+                `Email: ${email}`,
+                `City: ${city}`,
+                `Service Type: ${serviceType}`,
+                design !== "Select Design" ? `Design: ${design}` : "", // Include design only if selected
+                `Booking Date: ${bookingDate}`
+            ];
+            const message = messageLines.filter(Boolean).join('\n'); // Remove empty lines
+
+            // Detect if the user is on mobile or desktop
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const whatsappNumber = "918937000914"; // Replace with your WhatsApp number
+            const whatsappUrl = isMobile
+                ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}` // Mobile link
+                : `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`; // WhatsApp Web link
+
+            // Open WhatsApp link
+            window.open(whatsappUrl, '_blank');
+
+            // Show Thank You Modal
+            $("#thankYouModal").modal('show');
+        });
+    });
+
+
 })(jQuery);
 
