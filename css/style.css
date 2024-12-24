@@ -126,6 +126,23 @@ h4, h5, h6, .h4, .h5, .h6 {
     border-bottom: 1px solid rgba(0, 0, 0, .05);
 }
 
+/* Navbar */
+.navbar .navbar-brand img {
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+    pointer-events: none; /* Prevents clicking to protect logo from being downloaded */
+}
+/* Media Queries */
+/* Smartphones and Tablets */
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand img {
+        width: 80px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 .navbar .navbar-nav .nav-link {
     padding: 10px 12px;
     font-weight: 600;
@@ -488,6 +505,21 @@ h4, h5, h6, .h4, .h5, .h6 {
 /*** Footer Start ***/
 .footer .footer-item a.text-body:hover {
     color: var(--bs-primary) !important;
+}
+.footer-item img {
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+    pointer-events: none; /* Prevents clicking to protect logo from being downloaded */
+}
+/* Media Queries */
+/* Smartphones and Tablets */
+@media (max-width: 991.98px) {
+    .footer-item img {
+        width: 120px;
+        max-width: 100%;
+        height: auto;
+    }
 }
 /*** Footer End ***/
 
