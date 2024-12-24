@@ -131,7 +131,71 @@
         </div>
         <!-- About End -->
 
-        <!-- Fact Start-->
+        <!-- Fact Start -->
+        <div class="container-fluid faqt py-5">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="row g-4">
+                            <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.3s">
+                                <div class="faqt-item bg-primary rounded p-4 text-center">
+                                    <i class="fas fa-users fa-4x mb-4 text-white"></i>
+                                    <h1 class="display-4 fw-bold" data-toggle="counter-up">20,000</h1>
+                                    <p class="text-dark text-uppercase fw-bold mb-0">Happy Clients</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.5s">
+                                <div class="faqt-item bg-primary rounded p-4 text-center">
+                                    <i class="fas fa-palette fa-4x mb-4 text-white"></i>
+                                    <h1 class="display-4 fw-bold" data-toggle="counter-up">100</h1>
+                                    <p class="text-dark text-uppercase fw-bold mb-0">Custom Designs</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.7s">
+                                <div class="faqt-item bg-primary rounded p-4 text-center">
+                                    <i class="fas fa-check fa-4x mb-4 text-white"></i>
+                                    <h1 class="display-4 fw-bold" data-toggle="counter-up">12</h1>
+                                    <p class="text-dark text-uppercase fw-bold mb-0">Years of Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <div class="video" style="background: linear-gradient(rgba(254, 218, 154, 0.1), rgba(254, 218, 154, 0.1)), url(img/about.jpg);">
+                            <button type="button" class="btn btn-play" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fact End -->
+
+        <!-- Modal Video -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <!-- Video Tag -->
+                            <video id="video" class="embed-responsive-item" controls autoplay muted>
+                                <source src="img/video.mp4" type="video/mp4" />
+                                <source src="img/video.ogg" type="video/ogg" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fact Start (YouTube) --
         <div class="container-fluid faqt py-5">
             <div class="container">
                 <div class="row g-4 align-items-center">
@@ -171,7 +235,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal Video -->
+        <!-- Modal Video --
         <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content rounded-0">
@@ -180,7 +244,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- 16:9 aspect ratio -->
+                        <!-- 16:9 aspect ratio --
                         <div class="ratio ratio-16x9">
                             <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
                         </div>

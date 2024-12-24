@@ -30,7 +30,7 @@
     });
 
 
-    // Modal Video
+    /* Modal For Youtube Video
     $(document).ready(function () {
         var $videoSrc;
         $('.btn-play').click(function () {
@@ -46,7 +46,30 @@
             $("#video").attr('src', $videoSrc);
         })
     });
+    */
 
+    // Modal Video
+    $(document).ready(function () {
+        var $videoSrc;
+        $('.btn-play').click(function () {
+            // This is not required if you're using a local video file, as there's no dynamic URL to load for YouTube.
+            $videoSrc = "img/video.mp4"; // Path to your local video
+            console.log('Video source set to:', $videoSrc);
+        });
+
+        $('#videoModal').on('shown.bs.modal', function (e) {
+            // Set the source of the local video
+            $("#video").attr('src', $videoSrc);
+            // Optional: If you want the video to autoplay, use the 'autoplay' attribute on the <video> tag
+            $("#video")[0].play();
+        });
+
+        $('#videoModal').on('hide.bs.modal', function (e) {
+            // Pause the video when the modal is hidden (optional, depending on behavior you want)
+            $("#video")[0].pause();
+            $("#video")[0].currentTime = 0; // Reset video to the beginning
+        });
+    });
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
