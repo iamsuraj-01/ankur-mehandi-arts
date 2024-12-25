@@ -193,6 +193,7 @@
             button.addEventListener('click', () => {
                 const packageName = button.getAttribute('data-package');
                 const formSelect = document.getElementById('design');
+                const bookNowSection = document.getElementById('bookNowSection');
     
                 // Set the selected value in the dropdown
                 for (let option of formSelect.options) {
@@ -203,7 +204,7 @@
                 }
     
                 // Scroll to the form section
-                formSelect.scrollIntoView({ behavior: 'smooth' });
+                bookNowSection.scrollIntoView({ behavior: 'smooth' });
             });
         });
     });
