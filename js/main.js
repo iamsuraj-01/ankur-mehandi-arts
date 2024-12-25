@@ -154,7 +154,6 @@
             const phone = $("#phone").val();
             const email = $("#email").val();
             const city = $("#city option:selected").text();
-            const serviceType = $("#serviceType option:selected").text();
             const design = $("#design option:selected").text();
             const bookingDate = $("#bookingDate").val();
 
@@ -165,8 +164,7 @@
                 `Phone: ${phone}`,
                 `Email: ${email}`,
                 `City: ${city}`,
-                `Service Type: ${serviceType}`,
-                design !== "Select Design" ? `Design: ${design}` : "", // Include design only if selected
+                `Design: ${design}`,
                 `Booking Date: ${bookingDate}`
             ];
             const message = messageLines.filter(Boolean).join('\n'); // Remove empty lines
@@ -186,6 +184,29 @@
         });
     });
 
-
+    // from package section book now connection with book now form section functionaliy
+    document.addEventListener('DOMContentLoaded', () => {
+        // Attach event listeners to all "Book Now" buttons
+        const bookNowButtons = document.querySelectorAll('.book-now-btn');
+    
+        bookNowButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const packageName = button.getAttribute('data-package');
+                const formSelect = document.getElementById('design');
+    
+                // Set the selected value in the dropdown
+                for (let option of formSelect.options) {
+                    if (option.textContent.trim() === packageName) {
+                        formSelect.value = option.value;
+                        break;
+                    }
+                }
+    
+                // Scroll to the form section
+                formSelect.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    });
+    
 })(jQuery);
 
