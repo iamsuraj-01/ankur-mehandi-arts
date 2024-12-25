@@ -216,13 +216,13 @@ h4, h5, h6, .h4, .h5, .h6 {
 }
 /*** Events End ***/
 
-
 /*** service start ***/
 .service .service-item {
     position: relative;
     height: 100%;
     border-radius: 8px;
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    overflow: hidden; /* To prevent image overflow during zoom effect */
 }
 
 .service-content::after {
@@ -236,11 +236,12 @@ h4, h5, h6, .h4, .h5, .h6 {
     background: var(--bs-primary);
     border-radius: 8px;
     transition: 1s;
+    opacity: 0; /* Remove background animation */
 }
 
 .service-item:hover .service-content::after {
     height: 100%;
-    opacity: 1;
+    opacity: 0; /* Disable the sliding background */
 }
 
 .service-item .service-content-icon {
@@ -248,17 +249,21 @@ h4, h5, h6, .h4, .h5, .h6 {
     z-index: 2;
 }
 
-.service-item .service-content-icon i,
-.service-item .service-content-icon p {
-    transition: 1s;
+.service-item .service-content-icon img {
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth zoom-in effect */
 }
 
-.service-item:hover .service-content-icon i {
-    color: var(--bs-dark) !important;
+.service-item:hover .service-content-icon img {
+    transform: scale(1.1); /* Zoom-in on hover */
+    opacity: 0.9; /* Slight fade effect for smoother transition */
+}
+
+.service-item .service-content-icon p {
+    transition: color 1s;
 }
 
 .service-item:hover .service-content-icon p {
-    color: var(--bs-white);
+    color: var(--bs-dark); /* Text color change on hover (if needed) */
 }
 
 .service-item:hover .service-content-icon a.btn-primary {
@@ -269,8 +274,8 @@ h4, h5, h6, .h4, .h5, .h6 {
 .service-item .service-content-icon a.btn-primary {
     transition: 1s !important;
 }
-/*** Services End ***/
 
+/*** Services End ***/
 
 /*** Menu Start ***/
 .menu .nav-item a.active {
