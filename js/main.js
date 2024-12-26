@@ -29,7 +29,6 @@
         return false;
     });
 
-
     /* Modal For Youtube Video
     $(document).ready(function () {
         var $videoSrc;
