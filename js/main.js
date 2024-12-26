@@ -153,7 +153,7 @@
             const name = $("#name").val();
             const phone = $("#phone").val();
             const email = $("#email").val();
-            const city = $("#city option:selected").text();
+            const address = $("#address").val();
             const design = $("#design option:selected").text();
             const bookingDate = $("#bookingDate").val();
 
@@ -163,7 +163,7 @@
                 `Name: ${name}`,
                 `Phone: ${phone}`,
                 `Email: ${email}`,
-                `City: ${city}`,
+                `Address: ${address}`,
                 `Design: ${design}`,
                 `Booking Date: ${bookingDate}`
             ];
