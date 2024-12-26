@@ -298,7 +298,7 @@ h4, h5, h6, .h4, .h5, .h6 {
         justify-content: center;
     }
     .menu .menu-item h4 {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 /*** Menu End ***/
