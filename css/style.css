@@ -532,6 +532,15 @@ h4, h5, h6, .h4, .h5, .h6 {
 .contact-form {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
 }
+.form-control::placeholder {
+    color: #000000!important;
+}
+.form-control {
+    color: #000000!important;
+}
+.form-select {
+    color: #000000!important;
+}
 
 /*** Contact End ***/
 
